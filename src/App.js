@@ -51,7 +51,7 @@ function App() {
           <Key label="=" onClick={() => {}} />
           <Key label="/" onClick={() => handleClick('/')} />
         </div>
-        <Key label="PELAYO, KRISTA JEZEL S" onClick={showFullName} />
+        <Key label="PELAYO" onClick={showFullName} />
       </div>
     </div>
   );
