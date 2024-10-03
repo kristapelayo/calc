@@ -28,6 +28,15 @@ function App() {
     setDisplayValue("Pelayo, Krista Jezel S");
   };
 
+  const calculateResult = () => {
+    try {
+      const result = eval(displayValue.replace('x', '*'));
+      setDisplayValue(result.toString());
+    } catch (error) {
+      setDisplayValue("Error");
+    }
+  };
+
   return (
     <div className="App">
       <h2>Calculator of Krista Jezel Pelayo - IT3A</h2>
@@ -45,10 +54,10 @@ function App() {
           <Key label={7} onClick={() => handleClick(7)} />
           <Key label={8} onClick={() => handleClick(8)} />
           <Key label={9} onClick={() => handleClick(9)} />
-          <Key label="x" onClick={() => handleClick('*')} />
+          <Key label="x" onClick={() => handleClick('x')} />
           <Key label={0} onClick={() => handleClick(0)} />
           <Key label="C" onClick={() => setDisplayValue("0")} />
-          <Key label="=" onClick={() => {}} />
+          <Key label="=" onClick={calculateResult} />
           <Key label="/" onClick={() => handleClick('/')} />
         </div>
         <Key label="PELAYO" onClick={showFullName} />
