@@ -24,8 +24,13 @@ function App() {
     setDisplayValue(prev => prev === "0" ? label.toString() : prev + label);
   };
 
+  const showFullName = () => {
+    setDisplayValue("Juan Dela Cruz");
+  };
+
   return (
     <div className="App">
+      <h2>Calculator of Krista Jezel Pelayo - IT3A</h2>
       <div className="Calc">
         <Display value={displayValue} />
         <div className="ButtonsContainer">
@@ -46,6 +51,7 @@ function App() {
           <Key label="=" onClick={() => {}} />
           <Key label="/" onClick={() => handleClick('/')} />
         </div>
+        <Key label="PELAYO, KRISTA JEZEL S" onClick={showFullName} />
       </div>
     </div>
   );
