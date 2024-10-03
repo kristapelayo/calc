@@ -25,7 +25,7 @@ function App() {
   };
 
   const showFullName = () => {
-    setDisplayValue("Juan Dela Cruz");
+    setDisplayValue("Pelayo, Krista Jezel S");
   };
 
   return (
